@@ -23,8 +23,8 @@
     "keybindings": [
       {
         "command": "pinpoint.copy",
-        "key": "ctrl+shift+l",
-        "mac": "cmd+shift+l",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+alt+l",
         "when": "editorTextFocus"
       }
     ],
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.7.1",
     "esbuild": "^0.24.0",
     "typescript": "^5.7.0"
   },

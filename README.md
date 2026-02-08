@@ -9,6 +9,6 @@ Copy file path with line numbers to clipboard.
 
 ## Usage
 
-- **Keybinding**: `Cmd+Shift+L` (mac) / `Ctrl+Shift+L` (win/linux)
+- **Keybinding**: `Cmd+Option+L` (mac) / `Ctrl+Alt+L` (win/linux)
 - **Context menu**: Right-click in editor → "Pinpoint: Copy File Reference"
 - **Command palette**: `Pinpoint: Copy File Reference`

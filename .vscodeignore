@@ -3,3 +3,4 @@ node_modules/
 tsconfig.json
 esbuild.js
 .gitignore
+pnpm-lock.yaml
