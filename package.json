@@ -1,0 +1,55 @@
+{
+  "name": "pinpoint",
+  "displayName": "Pinpoint",
+  "description": "Copy file path with line numbers to clipboard",
+  "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "armand",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pinpoint.copy",
+        "title": "Pinpoint: Copy File Reference"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pinpoint.copy",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "pinpoint.copy",
+          "group": "9_cutcopypaste"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
