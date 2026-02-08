@@ -1,29 +1,24 @@
-# Publier Pinpoint sur le VS Code Marketplace
+# Publishing to VS Code Marketplace
 
-## Prérequis
+For the release workflow (GitHub Releases + `.vsix` downloads), see `CLAUDE.md` > Release procedure.
 
-1. **Compte Azure DevOps** → https://dev.azure.com (connexion Microsoft)
-2. **Personal Access Token (PAT)** :
-   - User settings → Personal access tokens → New Token
-   - Organization : **All accessible organizations**
-   - Scopes : **Marketplace > Manage**
-   - Copier le token immédiatement
-3. **Publisher** → https://marketplace.visualstudio.com/manage
-   - Publisher ID doit correspondre au champ `publisher` dans package.json (`"armand"`)
+## Marketplace publishing (when ready)
 
-## Avant publication
+### Prerequisites
 
-Ajouter dans `package.json` :
-- `repository` : `https://github.com/armandsalle/pinpoint`
-- `keywords` : `["copy", "path", "line-number", "clipboard", "reference"]`
+1. **Azure DevOps account** — https://dev.azure.com
+2. **Personal Access Token (PAT)**: User settings > Personal access tokens > New Token
+   - Organization: **All accessible organizations**
+   - Scopes: **Marketplace > Manage**
+3. **Publisher** registered at https://marketplace.visualstudio.com/manage (ID: `armand`)
 
-## Publication
+### Publish
 
 ```bash
 npx vsce login armand
 npx vsce publish --no-dependencies
 ```
 
-## Vérification
+### Verify
 
-Extension visible sur `https://marketplace.visualstudio.com/items?itemName=armand.pinpoint`
+Extension visible at `https://marketplace.visualstudio.com/items?itemName=armand.pinpoint`

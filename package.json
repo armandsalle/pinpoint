@@ -5,6 +5,10 @@
   "version": "0.1.1",
   "license": "MIT",
   "publisher": "armand",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armandsalle/pinpoint"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -41,7 +45,8 @@
   "scripts": {
     "compile": "node esbuild.js",
     "watch": "node esbuild.js --watch",
-    "package": "vsce package --no-dependencies"
+    "package": "vsce package --no-dependencies",
+    "release": "git tag v$(node -p \"require('./package.json').version\") && git push origin v$(node -p \"require('./package.json').version\")"
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
